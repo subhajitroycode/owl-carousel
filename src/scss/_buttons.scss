@@ -1,0 +1,46 @@
+@use "assets" as *;
+
+@mixin profile-button {
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    button {
+      background-color: $img-bg-color;
+      outline: none;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #fff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($img-bg-color, 15%);
+      }
+    }
+  }
+}
+
+@mixin swipper-button {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $img-bg-color;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background-color: $img-bg-color;
+  }
+}
